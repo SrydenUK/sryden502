@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sryden UK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'DM Sans', sans-serif;">
+
+<center>
+<br>
+<div style="background-color: #F1F1F1; border-radius: 7px; width: 95%;">
+<br>
+<h2>502 Bad Gateway</h2>
+<h4>Failed to connect, please try again later</h4>
+<br>
+</div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/875746212383424532/966320980916072448/EXAL_47.png" width=640 height=360>
+<br>
+<div style="background-color: #F1F1F1; border-radius: 7px; width: 95%;">
+<br>
+<h4><span id="ipaddress"></span></h4>
+<br>
+</div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://api.ipify.org?format=jsonp&callback=DisplayIP";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        };
+        function DisplayIP(response) {
+            document.getElementById("ipaddress").innerHTML = "Your IP Address is " + response.ip;
+        }
+    </script>
+</body>
+</html>
+
